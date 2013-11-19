@@ -12,8 +12,8 @@ TagManager:
   Builtin Layer 5: 
   Builtin Layer 6: 
   Builtin Layer 7: 
-  User Layer 8: 
-  User Layer 9: 
+  User Layer 8: Floor
+  User Layer 9: Collision
   User Layer 10: 
   User Layer 11: 
   User Layer 12: 
@@ -37,6 +37,10 @@ TagManager:
   User Layer 30: 
   User Layer 31: 
   m_SortingLayers:
+  - name: Floor
+    userID: 1
+    uniqueID: 3332621369
+    locked: 0
   - name: Default
     userID: 0
     uniqueID: 0
