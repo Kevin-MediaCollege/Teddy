@@ -1,7 +1,7 @@
 Amsterdam-Telefoonlijn
 ======================
 
-Code Guidelnes:
+Code Guidelines:
  - Geen _variables
  - Geen $parameters
  - Correct Engelse spelling
