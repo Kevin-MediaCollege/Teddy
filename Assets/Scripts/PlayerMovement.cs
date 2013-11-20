@@ -9,7 +9,7 @@ public class PlayerMovement:MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		Vector2 speed = Vector2.zero;
+		Vector3 speed = Vector3.zero;
 
 		if(Input.GetKey("w")) {
 			speed.y = walkSpeed;
@@ -23,6 +23,6 @@ public class PlayerMovement:MonoBehaviour {
 			speed.x = -walkSpeed;
 		}
 
-		rigidbody2D.velocity = speed * Time.deltaTime;
+		rigidbody.velocity = speed * Time.deltaTime;
 	}
 }

@@ -33,7 +33,7 @@ public class EnemySeeking:MonoBehaviour {
 	public void FixedUpdate () {
 		targetPosition = player.transform.position;
 
-		rigidbody2D.velocity = Vector2.zero;
+		rigidbody.velocity = Vector3.zero;
 
 		if (path == null) {
 			return;
@@ -46,7 +46,7 @@ public class EnemySeeking:MonoBehaviour {
 		Vector3 dir = (path.vectorPath[currentWaypoint]-transform.position).normalized;
 		dir *= walkSpeed * Time.deltaTime;
 
-		rigidbody2D.AddForce(new Vector2(dir.x, dir.y));
+		rigidbody.AddForce(new Vector3(dir.x, dir.y, 0));
 
 		if (Vector3.Distance (transform.position,path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
 			currentWaypoint++;
