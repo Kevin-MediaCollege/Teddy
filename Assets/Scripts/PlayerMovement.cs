@@ -10,6 +10,14 @@ public class PlayerMovement:MonoBehaviour {
 
 	void FixedUpdate () {
 		Vector3 speed = Vector3.zero;
+		Vector3 mousePos = Input.mousePosition;
+		Vector3 position = Camera.main.WorldToScreenPoint(transform.position);
+
+		mousePos.z = 5.23f;
+		mousePos.x = mousePos.x - position.x;
+		mousePos.y = mousePos.y - position.y;
+
+		transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg - 90));
 
 		if(Input.GetKey("w")) {
 			speed.y = walkSpeed;

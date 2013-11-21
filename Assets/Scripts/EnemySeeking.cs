@@ -20,10 +20,10 @@ public class EnemySeeking:MonoBehaviour {
 		seeker = GetComponent<Seeker>();
 		player = GameObject.Find("Player");
 
-		seeker.StartPath(transform.position,targetPosition, OnPathComplete);
+		Repath();
 	}
 	
-	public void OnPathComplete (Path p) {
+	public void OnPathComplete(Path p) {
 		if (!p.error) {
 			path = p;
 			currentWaypoint = 0;
@@ -31,26 +31,30 @@ public class EnemySeeking:MonoBehaviour {
 	}
 	
 	public void FixedUpdate () {
-		targetPosition = player.transform.position;
-
 		rigidbody.velocity = Vector3.zero;
 
-		if (path == null) {
+		if (path == null || currentWaypoint >= path.vectorPath.Count) {
 			return;
 		}
-		
-		if (currentWaypoint >= path.vectorPath.Count) {
+
+		if (Vector3.Distance (player.transform.position, targetPosition) > 1) {
+			Repath();
 			return;
 		}
 
 		Vector3 dir = (path.vectorPath[currentWaypoint]-transform.position).normalized;
-		dir *= walkSpeed * Time.deltaTime;
+		dir.z = 0;
 
-		rigidbody.AddForce(new Vector3(dir.x, dir.y, 0));
+		rigidbody.AddForce(dir * walkSpeed * Time.deltaTime);
 
-		if (Vector3.Distance (transform.position,path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
+		if (Vector3.Distance(transform.position,path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
 			currentWaypoint++;
 			return;
 		}
+	}
+
+	public void Repath() {
+		targetPosition = player.transform.position;
+		seeker.StartPath(transform.position, targetPosition, OnPathComplete);
 	}
 }
