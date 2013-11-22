@@ -2,35 +2,35 @@
 using System.Collections;
 
 public class PlayerMovement:MonoBehaviour {
-	public float walkSpeed;
+	public float _walk_speed;
 
 	void Start () {
 	
 	}
 
 	void FixedUpdate () {
-		Vector3 speed = Vector3.zero;
-		Vector3 mousePos = Input.mousePosition;
-		Vector3 position = Camera.main.WorldToScreenPoint(transform.position);
+		Vector3 _speed = Vector3.zero;
+		Vector3 _mousePos = Input._mouse_position;
+		Vector3 _position = Camera.main.WorldToScreenPoint(transform._position);
 
-		mousePos.z = 5.23f;
-		mousePos.x = mousePos.x - position.x;
-		mousePos.y = mousePos.y - position.y;
+		_mousePos.z = 5.23f;
+		_mousePos.x = _mousePos.x - _position.x;
+		_mousePos.y = _mousePos.y - _position.y;
 
-		transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg - 90));
+		transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(_mousePos.y, _mousePos.x) * Mathf.Rad2Deg - 90));
 
 		if(Input.GetKey("w")) {
-			speed.y = walkSpeed;
+			_speed.y = _walk_speed;
 		} else if(Input.GetKey("s")) {
-			speed.y = -walkSpeed;
+			_speed.y = -_walk_speed;
 		}
 
 		if(Input.GetKey("d")) {
-			speed.x = walkSpeed;
+			_speed.x = _walk_speed;
 		} else if(Input.GetKey("a")) {
-			speed.x = -walkSpeed;
+			_speed.x = -_walk_speed;
 		}
 
-		rigidbody.velocity = speed * Time.deltaTime;
+		rigidbody.velocity = _speed * Time.deltaTime;
 	}
 }
