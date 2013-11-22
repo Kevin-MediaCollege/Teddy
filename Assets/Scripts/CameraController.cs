@@ -2,17 +2,17 @@
 using System.Collections;
 
 public class CameraController:MonoBehaviour {
-	public Transform target;
+	public Transform _target;
 
-	public float distance = 0.0f;
-	private float height = 3.0f;
-	private float damping = 5.0f;
+	public float _distance = 0.0f;
+	private float _height = 3.0f;
+	private float _damping = 5.0f;
 	
 	void FixedUpdate() {
-		if(target != null){
+		if(_target != null){
 			Vector3 wantedPosition;
-			wantedPosition = target.TransformPoint(0, height - 2, distance);
-			transform.position = Vector3.Lerp (transform.position, wantedPosition, Time.deltaTime * damping);
+			wantedPosition = _target.TransformPoint(0, _height - 2, _distance);
+			transform.position = Vector3.Lerp (transform.position, wantedPosition, Time.deltaTime * _damping);
 		}
 	}
 }
