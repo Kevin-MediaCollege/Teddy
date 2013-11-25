@@ -33,11 +33,15 @@ public class EnemySeeking:MonoBehaviour {
 	public void FixedUpdate () {
 		rigidbody.velocity = Vector3.zero;
 
-		if (path == null || currentWaypoint >= path.vectorPath.Count) {
+		if (path == null) {
 			return;
 		}
 
-		if (Vector3.Distance (player.transform.position, targetPosition) > 1) {
+		if(currentWaypoint >= path.vectorPath.Count) {
+			return;
+		}
+
+		if (Vector3.Distance (player.transform.position, targetPosition) > 5) {
 			Repath();
 			return;
 		}
