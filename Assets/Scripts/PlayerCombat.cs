@@ -2,14 +2,10 @@
 using System.Collections;
 
 public class PlayerCombat:MonoBehaviour {
-	private WeaponManager.Weapons currentWeapon;
-
-	void Start() {
-
-	}
+	public WeaponManager.Weapons currentWeapon;
 
 	void Update() {
-		if(Input.GetAxis("Fire") != 0) {
+		if(Input.GetMouseButtonDown(0)) {
 			Collider[] hits = Physics.OverlapSphere(transform.position, 1);
 			
 			foreach (Collider hit in hits)	{
@@ -17,7 +13,6 @@ public class PlayerCombat:MonoBehaviour {
 					switch(currentWeapon){
 					case WeaponManager.Weapons.test1:
 						hit.gameObject.GetComponent<EnemyCombat>().Kill();
-						Debug.Log ("swag");
 						break;
 					}
 				}
@@ -27,10 +22,6 @@ public class PlayerCombat:MonoBehaviour {
 
 	void OnTriggerEnter(Collider collider) {
 		if(collider.gameObject.tag == "PickUp") {
-			if(currentWeapon != null) {
-				//Instantiate(Resources.Load(currentWeapon.ToString), transform.position, Quaternion.identity);
-			}
-
 			switch(collider.gameObject.name){
 			case "test1PickUp":
 				currentWeapon = WeaponManager.Weapons.test1;
