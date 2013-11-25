@@ -3,6 +3,8 @@ using System.Collections;
 using Pathfinding;
 
 public class EnemySeeking:MonoBehaviour {
+	public bool enabled;
+
 	public float walkSpeed;
 	public float runSpeed;
 
@@ -33,27 +35,29 @@ public class EnemySeeking:MonoBehaviour {
 	public void FixedUpdate () {
 		rigidbody.velocity = Vector3.zero;
 
-		if (path == null) {
-			return;
-		}
+		if(enabled) {
+			if (path == null) {
+				return;
+			}
 
-		if(currentWaypoint >= path.vectorPath.Count) {
-			return;
-		}
+			if(currentWaypoint >= path.vectorPath.Count) {
+				return;
+			}
 
-		if (Vector3.Distance (player.transform.position, targetPosition) > 5) {
-			Repath();
-			return;
-		}
+			if (Vector3.Distance (player.transform.position, targetPosition) > 5) {
+				Repath();
+				return;
+			}
 
-		Vector3 dir = (path.vectorPath[currentWaypoint]-transform.position).normalized;
-		dir.z = 0;
+			Vector3 dir = (path.vectorPath[currentWaypoint]-transform.position).normalized;
+			dir.z = 0;
 
-		rigidbody.AddForce(dir * walkSpeed * Time.deltaTime);
+			rigidbody.AddForce(dir * walkSpeed * Time.deltaTime);
 
-		if (Vector3.Distance(transform.position,path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
-			currentWaypoint++;
-			return;
+			if (Vector3.Distance(transform.position,path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
+				currentWaypoint++;
+				return;
+			}
 		}
 	}
 
