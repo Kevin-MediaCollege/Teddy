@@ -13,24 +13,21 @@ public class PlayerCombat:MonoBehaviour {
 			Collider[] hits = Physics.OverlapSphere(transform.position, 1);
 			
 			foreach (Collider hit in hits)	{
-				if (hit.name != "Player") {
+				Debug.Log("yolo");
+				//if (hit.name != "Player") {
 					switch(currentWeapon){
 					case WeaponManager.Weapons.test1:
 						hit.gameObject.GetComponent<EnemyCombat>().Kill();
 						Debug.Log ("swag");
 						break;
 					}
-				}
+				//}
 			}
 		}
 	}
 
 	void OnTriggerEnter(Collider collider) {
 		if(collider.gameObject.tag == "PickUp") {
-			if(currentWeapon != null) {
-				//Instantiate(Resources.Load(currentWeapon.ToString), transform.position, Quaternion.identity);
-			}
-
 			switch(collider.gameObject.name){
 			case "test1PickUp":
 				currentWeapon = WeaponManager.Weapons.test1;
