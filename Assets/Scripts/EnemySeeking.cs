@@ -8,6 +8,8 @@ public class EnemySeeking:MonoBehaviour {
 	public float walkSpeed;
 	public float runSpeed;
 
+	private bool aggro;
+
 	private Vector3 targetPosition;
 	
 	private Seeker seeker;
@@ -39,24 +41,40 @@ public class EnemySeeking:MonoBehaviour {
 			if (path == null) {
 				return;
 			}
-
-			if(currentWaypoint >= path.vectorPath.Count) {
-				return;
-			}
-
-			if (Vector3.Distance (player.transform.position, targetPosition) > 5) {
+			if (Vector3.Distance (player.transform.position, targetPosition) > 2) {
 				Repath();
-				return;
+			} else {
+				RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x + 0.5f, transform.position.y - 1.1f), -Vector2.up);
+				Debug.DrawRay(transform.position, -Vector2.up, Color.green, 100);
+
+				aggro = false;
+
+				if (hit) {
+					if(hit.collider.gameObject.name == "Player") {
+						aggro = true;
+					}
+				}
 			}
 
-			Vector3 dir = (path.vectorPath[currentWaypoint]-transform.position).normalized;
+			Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
 			dir.z = 0;
 
-			rigidbody.AddForce(dir * walkSpeed * Time.deltaTime);
+			transform.LookAt(player.transform.position);
+			transform.rotation = new Quaternion(0, 0, transform.rotation.z, transform.rotation.w);
 
-			if (Vector3.Distance(transform.position,path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
-				currentWaypoint++;
-				return;
+			if(!aggro) {
+				if(currentWaypoint >= path.vectorPath.Count) {
+					return;
+				}
+
+				rigidbody.AddForce(dir * walkSpeed * Time.deltaTime);
+
+				if (Vector3.Distance(transform.position,path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
+					currentWaypoint++;
+					return;
+				}
+			} else {
+				rigidbody.AddForce(dir * runSpeed * Time.deltaTime);
 			}
 		}
 	}

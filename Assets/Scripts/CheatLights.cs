@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Cheats:MonoBehaviour {
+public class CheatLights:MonoBehaviour {
 	private string[] lights = new string[] {"l", "i", "g", "h", "t", "s"};
 
 	private int index = 0;

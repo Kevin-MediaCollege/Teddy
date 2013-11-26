@@ -4,8 +4,10 @@ using System.Collections;
 public class PlayerMovement:MonoBehaviour {
 	public float walkSpeed;
 
+	private Animator walkAnimation;
+
 	void Start () {
-	
+		walkAnimation = GameObject.Find("player").GetComponent<Animator>();
 	}
 
 	void FixedUpdate () {
@@ -32,5 +34,13 @@ public class PlayerMovement:MonoBehaviour {
 		}
 
 		rigidbody.velocity = speed * Time.deltaTime;
+
+		/*if(speed != Vector3.zero && !walkAnimation.animation.isPlaying) {
+			Debug.Log ("yolo");
+			walkAnimation.StartPlayback();
+		} else if(speed == Vector3.zero && walkAnimation.animation.isPlaying) {
+			Debug.Log ("swag");
+			walkAnimation.StopPlayback();
+		}*/
 	}
 }
