@@ -1,35 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OnMouseClick : MonoBehaviour {
-
-	private bool wasClicked;
+public class OnMouseClick:MonoBehaviour {
 	public int LoadLevel;
+
+	private bool isClicked;
 	
 	void OnMouseDown() {
-		wasClicked = true;
+		isClicked = true;
 	}
 	
 	void OnMouseUp() {
-		wasClicked = false;
+		isClicked = false;
+
 		Application.LoadLevel(LoadLevel);
 	}
-	/*
-	void OnMouseEnter() {
-		if (wasClicked) {
-			Activate();
-		}
-	}
-	
-	void OnMouseExit() {
-		Deactivate();
-	}
-	
-	void Activate() {
-		renderer.material.color = Color.red;
-	}
-	
-	void Deactivate() {
-		renderer.material.color = Color.white;
-	}*/
 }
