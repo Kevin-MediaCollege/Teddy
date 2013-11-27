@@ -2,39 +2,33 @@
 using System.Collections;
 
 public class PlayerCombat:MonoBehaviour {
-	public WeaponManager.Weapons currentWeapon;
+	private GameObject currentWeaponGo;
 
 	void Update() {
-		if(Input.GetMouseButtonDown(0)) {
-			Collider[] hits = Physics.OverlapSphere(transform.position, 1);
-			
-			foreach (Collider hit in hits)	{
-				if (hit.name != "Player") {
-					switch(currentWeapon){
-					case WeaponManager.Weapons.test1:
+		if(currentWeaponGo != null) {
+			currentWeaponGo.transform.position = transform.position;
+			currentWeaponGo.transform.rotation = transform.rotation;
+
+			if(Input.GetMouseButtonDown(0)) {
+				Collider[] hits = Physics.OverlapSphere(transform.position, 1);
+				
+				foreach (Collider hit in hits)	{
+					if (hit.name == "Enemy") {
 						hit.gameObject.GetComponent<EnemyCombat>().Kill();
-						break;
 					}
 				}
 			}
 		}
 	}
 
-	void OnTriggerEnter(Collider collider) {
+	void OnTriggerStay(Collider collider) {
 		if(collider.gameObject.tag == "PickUp") {
-			switch(collider.gameObject.name){
-			case "test1PickUp":
-				currentWeapon = WeaponManager.Weapons.test1;
-				break;
-			case "test2PickUp":
-				currentWeapon = WeaponManager.Weapons.test2;
-				break;
+			if(Input.GetKeyDown(KeyCode.E)) {
+				Sprite sprite = collider.GetComponent<SpriteRenderer>().sprite;
+
+				currentWeaponGo = collider.gameObject;
 			}
-
-			Destroy(collider.gameObject,0.1f);
 		}
-
-		Debug.Log (currentWeapon);
 	}
 
 	public void Kill() {

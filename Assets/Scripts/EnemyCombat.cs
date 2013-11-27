@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EnemyCombat:MonoBehaviour {
-	public WeaponManager.Weapons weapon;
+	public GameObject weapon;
 
 	void FixedUpdate() {
 

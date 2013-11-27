@@ -2,23 +2,23 @@
 using System.Collections;
 
 public class CheatLights:MonoBehaviour {
-	private string[] lights = new string[] {"l", "i", "g", "h", "t", "s"};
+	private string[] cheat = new string[] {"l", "i", "g", "h", "t", "s"};
 
 	private int index = 0;
 
 	void Update() {
 		if(Input.anyKeyDown) {
-			if(Input.GetKeyDown(lights[index])) {
+			if(Input.GetKeyDown(cheat[index])) {
 				index++;
 			} else {
 				index = 0;
 			}
 		}	
 
-		if(index == lights.Length) {
+		if(index == cheat.Length) {
 			Light light = GameObject.Find("Main Light").GetComponent<Light>();
 
-			light.enabled = !light.enabled;
+			light.intensity = 0.1f;
 			index = 0;
 		}
 	}

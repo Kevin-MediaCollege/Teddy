@@ -8,6 +8,8 @@ public class EnemySeeking:MonoBehaviour {
 	public float walkSpeed;
 	public float runSpeed;
 
+	public Animator walkAnimation;
+
 	private bool aggro;
 
 	private Vector3 targetPosition;
@@ -56,6 +58,10 @@ public class EnemySeeking:MonoBehaviour {
 				}
 			}
 
+			if(currentWaypoint >= path.vectorPath.Count) {
+				return;
+			}
+			
 			Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
 			dir.z = 0;
 
@@ -63,10 +69,6 @@ public class EnemySeeking:MonoBehaviour {
 			transform.rotation = new Quaternion(0, 0, transform.rotation.z, transform.rotation.w);
 
 			if(!aggro) {
-				if(currentWaypoint >= path.vectorPath.Count) {
-					return;
-				}
-
 				rigidbody.AddForce(dir * walkSpeed * Time.deltaTime);
 
 				if (Vector3.Distance(transform.position,path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
