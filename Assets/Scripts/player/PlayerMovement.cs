@@ -4,8 +4,6 @@ using System.Collections;
 public class PlayerMovement:MonoBehaviour {
 	public float walkSpeed;
 
-	public Animator walkAnimation;
-
 	void FixedUpdate () {
 		Vector3 speed = Vector3.zero;
 		Vector3 mousePos = Input.mousePosition;
@@ -31,12 +29,10 @@ public class PlayerMovement:MonoBehaviour {
 		
 		rigidbody.velocity = speed * Time.deltaTime;
 
-		/*if(speed != Vector3.zero && !walkAnimation.animation.isPlaying) {
-			Debug.Log ("yolo");
-			walkAnimation.StartPlayback();
-		} else if(speed == Vector3.zero && walkAnimation.animation.isPlaying) {
-			Debug.Log ("swag");
-			walkAnimation.StopPlayback();
-		}*/
+		if(speed != Vector3.zero) {
+			GetComponent<Animator>().Play("PlayerWalk");
+		} else {
+			GetComponent<Animator>().Play("PlayerIdle");
+		}
 	}
 }
