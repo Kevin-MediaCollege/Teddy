@@ -1,15 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Cheats\CheatMusic.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Cheats\CheatFilter.cs">
     <Files>
-      <File FileName="Assets\Scripts\Cheats\CheatLights.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Cheats\CheatLights.cs" Line="5" Column="23" />
       <File FileName="Assets\Scripts\OnMouseClick.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Enemy\EnemyCombat.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Enemy\EnemySeeking.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\player\PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Cheats\CheatFly.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Cheats\CheatTralala.cs" Line="5" Column="84" />
-      <File FileName="Assets\Scripts\Cheats\CheatMusic.cs" Line="5" Column="8" />
+      <File FileName="Assets\Scripts\Cheats\CheatMusic.cs" Line="25" Column="74" />
+      <File FileName="Assets\Scripts\Cheats\CheatFilter.cs" Line="8" Column="8" />
+      <File FileName="Assets\Scripts\CameraController.cs" Line="39" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

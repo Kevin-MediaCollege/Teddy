@@ -19,11 +19,11 @@ public class CheatLights:MonoBehaviour {
 			Light light = GameObject.Find("Main Light").GetComponent<Light>();
 
 			if(light.intensity == 0.1f) {
-				light.intensity = 1;
-			} else if(light.intensity == 1) {
+				light.intensity = 0.8f;
+			} else {
 				light.intensity = 0.1f;
 			}
-
+				
 			index = 0;
 		}
 	}
