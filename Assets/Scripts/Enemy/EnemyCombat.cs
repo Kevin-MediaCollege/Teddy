@@ -10,7 +10,7 @@ public class EnemyCombat:MonoBehaviour {
 
 	void OnCollisionStay(Collision col) {
 		if (col.collider.gameObject.name == "Player") {
-		//	col.collider.GetComponent<PlayerCombat>().Kill();
+			col.collider.GetComponent<PlayerCombat>().Kill();
 		}
 	}
 

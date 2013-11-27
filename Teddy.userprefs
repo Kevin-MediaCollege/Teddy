@@ -1,11 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Cheats\CheatLights.cs">
     <Files>
-      <File FileName="Assets\Scripts\CheatLights.cs" Line="26" Column="1" />
-      <File FileName="Assets\Scripts\OnMouseClick.cs" Line="36" Column="1" />
-      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="7" Column="31" />
-      <File FileName="Assets\Scripts\EnemySeeking.cs" Line="88" Column="2" />
+      <File FileName="Assets\Scripts\OnMouseClick.cs" Line="17" Column="3" />
+      <File FileName="Assets\Scripts\Cheats\CheatJolene.cs" Line="16" Column="39" />
+      <File FileName="Assets\Scripts\Cheats\CheatLights.cs" Line="27" Column="9" />
+      <File FileName="Assets\Scripts\Enemy\EnemyCombat.cs" Line="21" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
