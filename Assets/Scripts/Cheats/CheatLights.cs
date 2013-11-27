@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class CheatLights:MonoBehaviour {
-	private string[] cheat = new string[] {"l", "i", "g", "h", "t", "s"};
+	public string[] cheat;
 
 	private int index = 0;
 

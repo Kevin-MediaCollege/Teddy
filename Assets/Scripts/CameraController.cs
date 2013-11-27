@@ -4,21 +4,24 @@ using System.Collections;
 public class CameraController:MonoBehaviour {
 	public Transform target;
 
+	public bool shake = false;
+
 	public float distance = 0.0f;
+	public float shakePower = 0.2f;
+	public float maxShakeTime = 0.3f;
+
 	private float height = 3.0f;
 	private float damping = 5.0f;
-
-	public bool shake =false;
 	private float shakeTime = 0.0f;
-	public float maxShakeTime = 0.3f;
-	private Vector3 beforeShakeposs;
-	public float shakePower = 0.2f;
+
+	private Vector3 startPos;
+
 	void Start(){
-		shakeTime=maxShakeTime;
+		shakeTime = maxShakeTime;
 	}
 
 	void FixedUpdate() {
-		transform.position=beforeShakeposs;
+		transform.position = startPos;
 
 		if(target != null){
 			Vector3 wantedPosition;
@@ -26,17 +29,15 @@ public class CameraController:MonoBehaviour {
 			transform.position = Vector3.Lerp (transform.position, wantedPosition, Time.deltaTime * damping);
 		}
 
-		beforeShakeposs = transform.position;
-		if(shake){
+		startPos = transform.position;
 
+		if(shake){
 			if(shakeTime>0){
-				transform.position += new Vector3(1,0,0)*Random.Range(-shakePower,shakePower);
-				shakeTime-=Time.deltaTime;
-			}
-			else
-			{
-				shake=false;
-				shakeTime=maxShakeTime;
+				transform.position += new Vector3(1, 0, 0) * Random.Range(-shakePower, shakePower);
+				shakeTime -= Time.deltaTime;
+			} else {
+				shake = false;
+				shakeTime = maxShakeTime;
 			}
 		}
 	}

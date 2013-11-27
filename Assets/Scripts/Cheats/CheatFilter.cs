@@ -5,7 +5,7 @@ public class CheatFilter:MonoBehaviour {
 	public Sprite negative;
 	public Sprite blackWhite;
 
-	private string[] cheat = new string[] {"f", "i", "l", "t", "e", "r"};
+	public string[] cheat;
 
 	private Sprite normal;
 

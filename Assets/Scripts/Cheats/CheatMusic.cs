@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CheatFly:MonoBehaviour {
-	private string[] cheat = new string[] {"f", "l", "y"};
-	
+public class CheatMusic:MonoBehaviour {
+	public string[] cheat;
+
 	public AudioClip song;
-	
+
 	private GameObject audio;
-	
+
 	private int index = 0;
 	private bool started = false;
 	
@@ -24,7 +24,7 @@ public class CheatFly:MonoBehaviour {
 			if(!started) {
 				AudioSource.PlayClipAtPoint(song, Camera.main.transform.position, 1);
 			}
-			
+
 			index = 0;
 		}
 	}
