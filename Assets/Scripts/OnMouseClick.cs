@@ -3,16 +3,39 @@ using System.Collections;
 
 public class OnMouseClick:MonoBehaviour {
 	public int LoadLevel;
+	public bool ExitGame = false;
+	public bool hasRenderer;
 
-	private bool isClicked;
-	
-	void OnMouseDown() {
-		isClicked = true;
+	private Color newcolor;
+	private Color origine;
+
+	void Start(){
+		if(hasRenderer){
+			newcolor = new Color(0.9f,0.4f,0.4f);
+			origine = gameObject.renderer.material.color;
+		}
 	}
-	
-	void OnMouseUp() {
-		isClicked = false;
+	void OnMouseOver() {
+		if(hasRenderer){
+			renderer.material.color = newcolor;
+		}
+	}
 
-		Application.LoadLevel(LoadLevel);
+	void OnMouseExit()
+	{
+		if(hasRenderer){
+			renderer.material.color = origine;
+		}
+	}
+
+	void OnMouseDown() {
+		
+		if(!ExitGame){
+			Application.LoadLevel(LoadLevel);
+		}
+		else{
+			if(!Application.isEditor && !Application.isWebPlayer)
+				Application.CancelQuit();
+		}
 	}
 }
