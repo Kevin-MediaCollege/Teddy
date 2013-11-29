@@ -35,7 +35,7 @@ public class ButtonManager:MonoBehaviour {
 			Application.LoadLevel(LoadLevel);
 		} else{
 			if(!Application.isEditor && !Application.isWebPlayer) {
-				Application.CancelQuit();
+				Application.Quit();
 			}
 		}
 	}
