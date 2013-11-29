@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ButtonHandler:MonoBehaviour {
+public class ButtonManager:MonoBehaviour {
 	public bool ExitGame = false;
 
 	public int LoadLevel;

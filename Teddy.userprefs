@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy\EnemySeeking.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ButtonManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\Enemy\EnemySeeking.cs" Line="20" Column="41" />
+      <File FileName="Assets\Scripts\Enemy\EnemySeeking.cs" Line="77" Column="2" />
+      <File FileName="Assets\Scripts\ButtonManager.cs" Line="43" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

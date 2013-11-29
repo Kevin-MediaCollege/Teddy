@@ -85,7 +85,7 @@ GameObject:
   - 114: {fileID: 1355234013}
   - 82: {fileID: 1355234015}
   m_Layer: 0
-  m_Name: SoundManager
+  m_Name: Sound Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
