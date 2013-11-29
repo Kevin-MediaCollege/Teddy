@@ -4,12 +4,15 @@ using System.Collections;
 public class CheatMusic:MonoBehaviour {
 	public string[] cheat;
 
-	public AudioClip song;
+	public AudioClip clip;
 
-	private GameObject audio;
+	private AudioManager manager;
 
 	private int index = 0;
-	private bool started = false;
+
+	void Start() {
+		manager = GameObject.Find("SoundManager").GetComponent<AudioManager>();
+	}
 	
 	void Update() {
 		if(Input.anyKeyDown) {
@@ -21,9 +24,8 @@ public class CheatMusic:MonoBehaviour {
 		}	
 		
 		if(index == cheat.Length) {
-			if(!started) {
-				AudioSource.PlayClipAtPoint(song, Camera.main.transform.position, 1);
-			}
+			manager.StopBackgroundAudio();
+			manager.PlayBackgroundAudio(clip);
 
 			index = 0;
 		}
