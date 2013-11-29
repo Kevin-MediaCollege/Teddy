@@ -31,20 +31,21 @@ public class EnemySeeking:MonoBehaviour {
 	}
 	
 	public void FixedUpdate () {
-		//Quaternion rotation = Quaternion.identity;
-		Vector3 velocity = Vector3.zero;
 		Vector3 playerPos = player.transform.position;
+		Vector3 velocity = Vector3.zero;
+
 		playerPos.x = playerPos.x - transform.position.x;
 		playerPos.y = playerPos.y - transform.position.y;
 		
 		transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(playerPos.y, playerPos.x) * Mathf.Rad2Deg + 90));
+		rigidbody.velocity = velocity;
 
 		if (path != null) {
 			if (Vector3.Distance (player.transform.position, targetPosition) > 2) {
 				targetPosition = player.transform.position;
 				seeker.StartPath(transform.position, targetPosition, OnPathComplete);
 			} else {
-				//TODO charge
+				//TODO Check if the player is in the LoS
 			}
 
 			if(currentWaypoint < path.vectorPath.Count) {
@@ -56,8 +57,6 @@ public class EnemySeeking:MonoBehaviour {
 				currentWaypoint++;
 			}
 		}
-
-		rigidbody.velocity = velocity;
 
 		if(velocity == Vector3.zero) {
 			GetComponent<Animator>().Play("EnemyIdle");

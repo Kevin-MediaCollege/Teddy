@@ -3141,6 +3141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 50c0a382946f5244fb278126fcdefbe6, type: 3}
   schedule: 1
+  endCurrent: 1
 --- !u!1 &2093489397
 GameObject:
   m_ObjectHideFlags: 0
