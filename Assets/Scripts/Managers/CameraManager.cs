@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraController:MonoBehaviour {
+public class CameraManager:MonoBehaviour {
 	public Transform target;
 
 	public bool shake = false;
@@ -32,7 +32,7 @@ public class CameraController:MonoBehaviour {
 		startPos = transform.position;
 
 		if(shake){
-			if(shakeTime>0){
+			if(shakeTime > 0){
 				transform.position += new Vector3(1, 0, 0) * Random.Range(-shakePower, shakePower);
 				shakeTime -= Time.deltaTime;
 			} else {
