@@ -1,8 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Managers\CameraManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Managers\ButtonManager.cs">
     <Files>
       <File FileName="Assets\Scripts\Managers\CameraManager.cs" Line="4" Column="43" />
+      <File FileName="Assets\Scripts\Managers\ButtonManager.cs" Line="38" Column="21" />
+      <File FileName="Assets\Scripts\Managers\KeyManager.cs" Line="11" Column="1" />
+      <File FileName="Assets\Scripts\Managers\WeaponManager.cs" Line="11" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

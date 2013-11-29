@@ -33,12 +33,4 @@ public class AudioManager:MonoBehaviour {
 	public bool IsBackgroundAudioPlaying() {
 		return backgroundAudio.isPlaying;
 	}
-
-	public void PlayForegroundAudio(AudioClip audio) {
-		
-	}
-
-	public void StopForegroundAudio() {
-
-	}
 }

@@ -8,8 +8,8 @@ public class AudioPlayer:MonoBehaviour {
 	private AudioManager manager;
 
 	void Start() {
-		if(GameObject.Find("SoundManager") != null) {
-			manager = GameObject.Find("SoundManager").GetComponent<AudioManager>();
+		if(GameObject.Find("Sound Manager") != null) {
+			manager = GameObject.Find("Sound Manager").GetComponent<AudioManager>();
 
 			if(!manager.IsBackgroundAudioPlaying()) {
 				manager.PlayBackgroundAudio(clip);
