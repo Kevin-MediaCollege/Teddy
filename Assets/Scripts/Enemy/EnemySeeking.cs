@@ -51,10 +51,10 @@ public class EnemySeeking:MonoBehaviour {
 			if(currentWaypoint < path.vectorPath.Count) {
 				velocity = (path.vectorPath[currentWaypoint] - transform.position).normalized;
 				velocity.z = 0;
-			}
 
-			if (Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
-				currentWaypoint++;
+				if (Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
+					currentWaypoint++;
+				}
 			}
 		}
 
