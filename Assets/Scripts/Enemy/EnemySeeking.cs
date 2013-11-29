@@ -31,16 +31,13 @@ public class EnemySeeking:MonoBehaviour {
 	}
 	
 	public void FixedUpdate () {
-		Quaternion rotation = Quaternion.identity;
+		//Quaternion rotation = Quaternion.identity;
 		Vector3 velocity = Vector3.zero;
-
-		transform.LookAt(player.transform.position);
-
-		rotation = transform.rotation;
-		rotation.z = rotation.y;
-		rotation.y = 0;
-
-		transform.rotation = rotation;
+		Vector3 playerPos = player.transform.position;
+		playerPos.x = playerPos.x - transform.position.x;
+		playerPos.y = playerPos.y - transform.position.y;
+		
+		transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(playerPos.y, playerPos.x) * Mathf.Rad2Deg + 90));
 
 		if (path != null) {
 			if (Vector3.Distance (player.transform.position, targetPosition) > 2) {
