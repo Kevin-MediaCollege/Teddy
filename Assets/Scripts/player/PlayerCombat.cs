@@ -4,7 +4,18 @@ using System.Collections;
 public class PlayerCombat:MonoBehaviour {
 	public AudioClip attackSound;
 
+	private int score;
+	private GUIText scoreDisplay;
+
 	private GameObject currentWeaponGo;
+
+	void Start() {
+		score = 0;
+
+		scoreDisplay = GameObject.Find("Score Display").GetComponent<GUIText>();
+
+		scoreDisplay.text = score.ToString("0");
+	}
 
 	void Update() {
 		if(currentWeaponGo != null) {
@@ -37,5 +48,11 @@ public class PlayerCombat:MonoBehaviour {
 
 	public void Kill() {
 		Application.LoadLevel(Application.loadedLevel);
+	}
+
+	public void addScore(int score) {
+		this.score += score;
+
+		scoreDisplay.text = score.ToString("0");
 	}
 }

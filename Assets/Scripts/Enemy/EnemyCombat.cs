@@ -20,6 +20,8 @@ public class EnemyCombat:MonoBehaviour {
 
 		GetComponent<Animator>().Play("EnemyDead");
 		GetComponent<SphereCollider>().enabled = false;
+
+		GameObject.Find("Player").GetComponent<PlayerCombat>().addScore(100);
 	}
 
 	public void StayDead() {
