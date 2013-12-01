@@ -3,6 +3,8 @@ using System.Collections;
 
 public class EnemyCombat:MonoBehaviour {
 	public GameObject weapon;
+
+	public bool dead = false;
 	
 	void OnCollisionStay(Collision col) {
 		if (col.collider.gameObject.name == "Player") {
@@ -11,6 +13,16 @@ public class EnemyCombat:MonoBehaviour {
 	}
 
 	public void Kill() {
-		Destroy(gameObject);
+		if(dead)
+			return;
+
+		dead = true;
+
+		GetComponent<Animator>().Play("EnemyDead");
+		GetComponent<SphereCollider>().enabled = false;
+	}
+
+	public void StayDead() {
+		GetComponent<Animator>().Play("EnemyDeadFinal");
 	}
 }

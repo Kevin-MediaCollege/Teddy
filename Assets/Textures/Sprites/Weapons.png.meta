@@ -45,46 +45,154 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 66
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 66
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 66
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 66
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_4
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 66
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_6
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 44
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_7
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 44
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_8
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 44
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_9
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 44
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 22
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_11
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 22
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_12
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 22
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_13
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 22
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_14
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 22
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_15
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 22
         height: 22
-      alignment: 8
-      pivot: {x: 1, y: 0}
-    - name: Weapons_1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Weapons_16
       rect:
         serializedVersion: 2
         x: 22
         y: 0
         width: 22
         height: 22
-      alignment: 8
-      pivot: {x: 1, y: 0}
-    - name: Weapons_2
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 0
-        width: 22
-        height: 22
-      alignment: 8
-      pivot: {x: 1, y: 0}
-    - name: Weapons_3
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 0
-        width: 22
-        height: 22
-      alignment: 8
-      pivot: {x: 1, y: 0}
-    - name: Weapons_4
-      rect:
-        serializedVersion: 2
-        x: 88
-        y: 0
-        width: 22
-        height: 22
-      alignment: 8
-      pivot: {x: 1, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
   spritePackingTag: 
   userData: 

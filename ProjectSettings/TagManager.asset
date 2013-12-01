@@ -45,6 +45,10 @@ TagManager:
     userID: 1
     uniqueID: 569472969
     locked: 0
+  - name: Dead Enemies
+    userID: 3
+    uniqueID: 3428377005
+    locked: 0
   - name: Weapons
     userID: 2
     uniqueID: 3617217627

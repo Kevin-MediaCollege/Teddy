@@ -14,9 +14,13 @@ public class EnemySeeking:MonoBehaviour {
 	private GameObject player;
 	private Seeker seeker;
 	private bool aggro;
+
+	private EnemyCombat combat;
 	
 	public void Start () {
 		seeker = GetComponent<Seeker>();
+		combat = GetComponent<EnemyCombat>();
+
 		player = GameObject.Find("Player");
 
 		targetPosition = player.transform.position;
@@ -31,42 +35,46 @@ public class EnemySeeking:MonoBehaviour {
 	}
 	
 	public void FixedUpdate () {
-		Vector3 playerPos = player.transform.position;
 		Vector3 velocity = Vector3.zero;
 
-		playerPos.x = playerPos.x - transform.position.x;
-		playerPos.y = playerPos.y - transform.position.y;
-		
-		transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(playerPos.y, playerPos.x) * Mathf.Rad2Deg + 90));
 		rigidbody.velocity = velocity;
 
-		if (path != null) {
-			if (Vector3.Distance (player.transform.position, targetPosition) > 2) {
-				targetPosition = player.transform.position;
-				seeker.StartPath(transform.position, targetPosition, OnPathComplete);
-			} else {
-				//TODO Check if the player is in the LoS
-			}
+		if(!combat.dead) {
+			Vector3 playerPos = player.transform.position;
 
-			if(currentWaypoint < path.vectorPath.Count) {
-				velocity = (path.vectorPath[currentWaypoint] - transform.position).normalized;
-				velocity.z = 0;
+			playerPos.x = playerPos.x - transform.position.x;
+			playerPos.y = playerPos.y - transform.position.y;
+			
+			transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(playerPos.y, playerPos.x) * Mathf.Rad2Deg + 90));
 
-				if (Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
-					currentWaypoint++;
+			if (path != null) {
+				if (Vector3.Distance (player.transform.position, targetPosition) > 2) {
+					targetPosition = player.transform.position;
+					seeker.StartPath(transform.position, targetPosition, OnPathComplete);
+				} else {
+					//TODO Check if the player is in the LoS
+				}
+
+				if(currentWaypoint < path.vectorPath.Count) {
+					velocity = (path.vectorPath[currentWaypoint] - transform.position).normalized;
+					velocity.z = 0;
+
+					if (Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
+						currentWaypoint++;
+					}
 				}
 			}
-		}
 
-		if(velocity == Vector3.zero) {
-			GetComponent<Animator>().Play("EnemyIdle");
-		} else {
-			GetComponent<Animator>().Play("EnemyWalk");
-
-			if(aggro) {
-				rigidbody.AddForce(velocity * runSpeed * Time.deltaTime);
+			if(velocity == Vector3.zero) {
+				GetComponent<Animator>().Play("EnemyIdle");
 			} else {
-				rigidbody.AddForce(velocity * walkSpeed * Time.deltaTime);
+				GetComponent<Animator>().Play("EnemyWalk");
+
+				if(aggro) {
+					rigidbody.AddForce(velocity * runSpeed * Time.deltaTime);
+				} else {
+					rigidbody.AddForce(velocity * walkSpeed * Time.deltaTime);
+				}
 			}
 		}
 	}

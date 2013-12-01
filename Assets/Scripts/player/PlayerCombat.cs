@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class PlayerCombat:MonoBehaviour {
+	public AudioClip attackSound;
+
 	private GameObject currentWeaponGo;
 
 	void Update() {
@@ -10,6 +12,8 @@ public class PlayerCombat:MonoBehaviour {
 			currentWeaponGo.transform.rotation = transform.rotation;
 
 			if(Input.GetMouseButtonDown(0)) {
+				AudioSource.PlayClipAtPoint(attackSound, transform.position);
+
 				Collider[] hits = Physics.OverlapSphere(transform.position, 1);
 				
 				foreach (Collider hit in hits)	{
