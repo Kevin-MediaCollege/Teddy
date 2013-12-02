@@ -1,5 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Button\MusicToggle.cs">
     <Files>
       <File FileName="Assets\Scripts\player\WeaponAnimation.cs" Line="37" Column="1" />
@@ -8,6 +9,23 @@
       <File FileName="Assets\Scripts\Button\MusicToggle.cs" Line="41" Column="20" />
       <File FileName="Assets\Scripts\Button\OnOffButtonMusic.cs" Line="22" Column="1" />
       <File FileName="Assets\Scripts\Button\OnOffButtonSFX.cs" Line="4" Column="28" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\PlayerCombat.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Player\PlayerCombat.cs" Line="21" Column="1" />
+      <File FileName="Assets\Scripts\Player\WeaponAnimation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Cheats\CheatMusic.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Audio\AudioPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\CameraManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\ButtonManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\KeyManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\WeaponManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Audio\AudioManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerCombat.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Intro.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LightBlink.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="1" Column="1" />
+>>>>>>> Added second level
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
