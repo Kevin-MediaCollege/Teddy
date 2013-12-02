@@ -12,6 +12,7 @@ public class PlayerCombat:MonoBehaviour {
 	private GUIText killsDisplay;
 
 	private GameObject currentWeaponGo;
+	private bool playSound = true;
 
 
 	void Start() {
@@ -23,7 +24,10 @@ public class PlayerCombat:MonoBehaviour {
 
 		scoreDisplay.text = "Score: " + this.score.ToString("0");
 		killsDisplay.text = "Kills: " + kills.ToString("0");
-		
+
+		AudioManager manage= GameObject.Find("Sound Manager").GetComponent<AudioManager>();
+
+		playSound=manage.playSFX;
 	}
 
 	void Update() {
@@ -32,7 +36,9 @@ public class PlayerCombat:MonoBehaviour {
 			currentWeaponGo.transform.rotation = transform.rotation;
 
 			if(Input.GetMouseButtonDown(0)) {
+				if(playSound){
 				AudioSource.PlayClipAtPoint(attackSound, transform.position);
+				}
 
 				Collider[] hits = Physics.OverlapSphere(transform.position, 1);
 				

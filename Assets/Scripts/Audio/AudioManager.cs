@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class AudioManager:MonoBehaviour {
+	public bool playMusic = true;
+	public bool playSFX = true;
+
 	private AudioSource backgroundAudio;
 	private AudioSource foregroundAudio;
 
@@ -15,13 +18,15 @@ public class AudioManager:MonoBehaviour {
 	}
 
 	public void PlayBackgroundAudio(AudioClip audio) {
-		if(backgroundAudio.isPlaying) {
-			backgroundAudio.Stop();
+		if(playMusic){
+			if(backgroundAudio.isPlaying) {
+				backgroundAudio.Stop();
+			}
+
+			backgroundAudio.clip = audio;
+
+			backgroundAudio.Play();
 		}
-
-		backgroundAudio.clip = audio;
-
-		backgroundAudio.Play();
 	}
 
 	public void StopBackgroundAudio() {
