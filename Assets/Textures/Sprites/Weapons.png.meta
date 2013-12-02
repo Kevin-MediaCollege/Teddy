@@ -194,5 +194,32 @@ TextureImporter:
         height: 22
       alignment: 9
       pivot: {x: .910531104, y: .0894690827}
+    - name: Weapons_17
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 0
+        width: 22
+        height: 22
+      alignment: 9
+      pivot: {x: .940909326, y: .0681817606}
+    - name: Weapons_18
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 22
+        height: 22
+      alignment: 9
+      pivot: {x: .836363733, y: .168181762}
+    - name: Weapons_19
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 22
+        height: 22
+      alignment: 9
+      pivot: {x: .886363626, y: .1045454}
   spritePackingTag: 
   userData: 

@@ -14,6 +14,8 @@ public class PlayerCombat:MonoBehaviour {
 	private ScoreManager scoreManager;
 
 	void Start() {
+		DontDestroyOnLoad(weapon);
+
 		scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
 
 		scoreDisplay = GameObject.Find("Score Display").GetComponent<GUIText>();
@@ -59,6 +61,8 @@ public class PlayerCombat:MonoBehaviour {
 	}
 
 	public void Kill() {
+		GameObject.Find("Score Manager").GetComponent<ScoreManager>().hasSpawned = false;
+
 		Application.LoadLevel(Application.loadedLevel);
 	}
 

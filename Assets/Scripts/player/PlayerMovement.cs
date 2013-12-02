@@ -4,6 +4,15 @@ using System.Collections;
 public class PlayerMovement:MonoBehaviour {
 	public float walkSpeed;
 
+	void Start() {
+		ScoreManager sm = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
+
+		if(sm.hasSpawned) {
+			transform.position = new Vector3(-12.5f, 5.5f, 0);
+			sm.hasSpawned = false;
+		}
+	}
+
 	void FixedUpdate () {
 		Vector3 speed = Vector3.zero;
 		Vector3 mousePos = Input.mousePosition;
@@ -39,6 +48,9 @@ public class PlayerMovement:MonoBehaviour {
 	void OnTriggerEnter(Collider collider) {
 		if(collider.name == "Next Level") {
 			Application.LoadLevel(6);
+		} else if(collider.name == "Prev Level") {
+			GameObject.Find("Score Manager").GetComponent<ScoreManager>().hasSpawned = true;
+			Application.LoadLevel(5);
 		}
 	}
 }
