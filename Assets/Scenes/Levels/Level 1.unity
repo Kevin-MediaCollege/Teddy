@@ -620,7 +620,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackSound: {fileID: 8300000, guid: 376c014a6c6122e44b9e02e399da599e, type: 3}
   weapon: {fileID: 390540832}
-  weaponRotPoint: {fileID: 0}
 --- !u!135 &100176108
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6345,14 +6344,14 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: b02744cd2176f824e9ef285473c52d70, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .400000006
+  m_Volume: .699999988
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: .00999999978
-  MaxDistance: .5
+  MinDistance: .0109999999
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -6986,8 +6985,8 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: .00999999978
-  MaxDistance: .5
+  MinDistance: .495049506
+  MaxDistance: 5
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
