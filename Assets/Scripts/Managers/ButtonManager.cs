@@ -10,27 +10,28 @@ public class ButtonManager:MonoBehaviour {
 
 	private Color newColor;
 	private Color originalColor;
+
 	private Vector3 orignalPos;
 
 	void Start(){
 		if(hasRenderer){
 			newColor = new Color(0.9f, 0.4f, 0.9f);
 			originalColor = gameObject.renderer.material.color;
-			orignalPos=transform.position;
+			orignalPos = transform.position;
 		}
 	}
 
 	void OnMouseOver() {
 		if(hasRenderer){
 			renderer.material.color = newColor;
-			transform.position=orignalPos+new Vector3(0,0.05f);
+			transform.position = orignalPos + new Vector3(0, 0.05f, 0);
 		}
 	}
 
 	void OnMouseExit() {
 		if(hasRenderer){
 			renderer.material.color = originalColor;
-			transform.position=orignalPos;
+			transform.position = orignalPos;
 		}
 	}
 
