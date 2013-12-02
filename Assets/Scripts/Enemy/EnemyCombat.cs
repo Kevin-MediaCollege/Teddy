@@ -20,6 +20,7 @@ public class EnemyCombat:MonoBehaviour {
 
 		GetComponent<Animator>().Play("EnemyDead");
 		GetComponent<SphereCollider>().enabled = false;
+		GetComponent<SpriteRenderer>().sortingLayerName = "Enemies Dead";
 
 		GameObject.Find("Player").GetComponent<PlayerCombat>().addScore(100);
 	}
