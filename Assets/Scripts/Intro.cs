@@ -55,9 +55,11 @@ public class Intro:MonoBehaviour {
 		foreach(char letter in text.ToCharArray()) {
 			line.text += letter;
 
-			if(GameObject.Find("Sound Manager").GetComponent<AudioManager>().sfxEnabled) {
-				audio.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
-				yield return 0;
+			if(GameObject.Find("Sound Manager")) {
+				if(GameObject.Find("Sound Manager").GetComponent<AudioManager>().sfxEnabled) {
+					audio.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
+					yield return 0;
+				}
 			}
 
 			yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));

@@ -99,14 +99,14 @@ GUIText:
   m_Enabled: 0
   serializedVersion: 3
   m_Text: Ted's inner feelings.
-  m_Anchor: 0
+  m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 5e907c82819a8414d9b53cdaad125622, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -120,7 +120,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 172003888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .409999996, y: .800000012, z: 0}
+  m_LocalPosition: {x: .5, y: .870000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -149,14 +149,14 @@ GUIText:
   m_Enabled: 0
   serializedVersion: 3
   m_Text: Ted is luckily very stable and happy under medication.
-  m_Anchor: 0
+  m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 5e907c82819a8414d9b53cdaad125622, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -170,7 +170,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 210254937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .280000001, y: .479999989, z: 0}
+  m_LocalPosition: {x: .5, y: .660000026, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -199,14 +199,14 @@ GUIText:
   m_Enabled: 0
   serializedVersion: 3
   m_Text: 'Doctor: Ted, did you take your medications today?'
-  m_Anchor: 0
+  m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 5e907c82819a8414d9b53cdaad125622, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -220,7 +220,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 297713131}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .289999992, y: .409999996, z: 0}
+  m_LocalPosition: {x: .5, y: .610000014, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -249,14 +249,14 @@ GUIText:
   m_Enabled: 0
   serializedVersion: 3
   m_Text: but this reminds him of his unusual phobia of the fur animals.
-  m_Anchor: 0
+  m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 5e907c82819a8414d9b53cdaad125622, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -270,7 +270,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 777178164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .239999995, y: .529999971, z: 0}
+  m_LocalPosition: {x: .5, y: .689999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -299,14 +299,14 @@ GUIText:
   m_Enabled: 0
   serializedVersion: 3
   m_Text: Ted used to be called Teddy,
-  m_Anchor: 0
+  m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 5e907c82819a8414d9b53cdaad125622, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -320,7 +320,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 990035814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .379999995, y: .579999983, z: 0}
+  m_LocalPosition: {x: .5, y: .720000029, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -429,14 +429,14 @@ GUIText:
   m_Enabled: 0
   serializedVersion: 3
   m_Text: 'Insane Asylum:'
-  m_Anchor: 0
+  m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 5e907c82819a8414d9b53cdaad125622, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -450,7 +450,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1094515255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .444999993, y: .850000024, z: 0}
+  m_LocalPosition: {x: .5, y: .899999976, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -510,7 +510,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: .5
+  m_Volume: .25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -583,14 +583,14 @@ GUIText:
   m_Enabled: 0
   serializedVersion: 3
   m_Text: 'Ted: No.'
-  m_Anchor: 0
+  m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 5e907c82819a8414d9b53cdaad125622, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -604,7 +604,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1648903671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .469999999, y: .340000004, z: 0}
+  m_LocalPosition: {x: .5, y: .550000012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -633,14 +633,14 @@ GUIText:
   m_Enabled: 0
   serializedVersion: 3
   m_Text: Click to continue
-  m_Anchor: 0
+  m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 5e907c82819a8414d9b53cdaad125622, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -654,7 +654,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1652599624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .425000012, y: .100000001, z: 0}
+  m_LocalPosition: {x: .5, y: .0500000007, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -683,14 +683,14 @@ GUIText:
   m_Enabled: 0
   serializedVersion: 3
   m_Text: Ted is a mental patient at the happiness falls insane asylum.
-  m_Anchor: 0
+  m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 5e907c82819a8414d9b53cdaad125622, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -704,7 +704,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1687320716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .230000004, y: .629999995, z: 0}
+  m_LocalPosition: {x: .5, y: .75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

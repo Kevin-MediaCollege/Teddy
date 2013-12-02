@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   kills: 0
+  hasSpawned: 0
 --- !u!4 &70441552
 Transform:
   m_ObjectHideFlags: 0
@@ -142,6 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a333d203260de05489686b7c2391839a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicEnabled: 1
+  sfxEnabled: 1
 --- !u!4 &1355234014
 Transform:
   m_ObjectHideFlags: 0
