@@ -18,22 +18,10 @@ public class PlayerCombat:MonoBehaviour {
 
 		scoreDisplay = GameObject.Find("Score Display").GetComponent<GUIText>();
 		killsDisplay = GameObject.Find("Kills Display").GetComponent<GUIText>();
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-		scoreDisplay.text = "Score: " + this.score.ToString("0");
-		killsDisplay.text = "Kills: " + kills.ToString("0");
-
-		AudioManager manage= GameObject.Find("Sound Manager").GetComponent<AudioManager>();
-
-		playSound=manage.playSFX;
-=======
->>>>>>> 2a1363e24fb34a9e1047c17cf27e25d1c98f411e
+		
 		scoreDisplay.text = "Score: " + scoreManager.score.ToString("0");
 		killsDisplay.text = "Kills: " + scoreManager.kills.ToString("0");
-		
->>>>>>> Added second level
+
 	}
 
 	void Update() {
