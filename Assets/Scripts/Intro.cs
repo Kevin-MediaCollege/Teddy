@@ -6,12 +6,17 @@ public class Intro:MonoBehaviour {
 
 	public float minDelay;
 	public float maxDelay;
-	
-	private string text;
+
 	private GUIText line;
+	private string text;
+
 	private int curLine = 0;
 
 	void Start() {
+		if(GameObject.Find("Sound Manager")) {
+			GameObject.Find("Sound Manager").GetComponent<AudioManager>().StopBackgroundAudio();
+		}
+
 		NextLine();
 	}
 
@@ -22,24 +27,31 @@ public class Intro:MonoBehaviour {
 	}
 
 	void NextLine() {
-		if(curLine < 8) {
-			line = GameObject.Find("Line " + curLine).GetComponent<GUIText>();
-		} else if(curLine == 8) {
-			line = GameObject.Find("Continue").GetComponent<GUIText>();
-		} else {
+		float wait = 0;
+
+		if(curLine > 8) {
 			return;
+		} else if(curLine == 2) {
+			wait = 1;
+		} else if(curLine == 6 || curLine == 7 || curLine == 8) {
+			wait = 2;
 		}
 
+		line = GameObject.Find("Line " + curLine).GetComponent<GUIText>();
+
 		text = line.text;
+
 		line.text = "";
 		line.enabled = true;
-		
+
 		curLine++;
-		
-		StartCoroutine(WriteText());
+
+		StartCoroutine(WriteText(wait));
 	}
 
-	IEnumerator WriteText() {
+	IEnumerator WriteText(float wait) {
+		yield return new WaitForSeconds(wait);
+
 		foreach(char letter in text.ToCharArray()) {
 			line.text += letter;
 

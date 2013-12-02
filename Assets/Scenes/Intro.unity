@@ -198,7 +198,7 @@ GUIText:
   m_GameObject: {fileID: 297713131}
   m_Enabled: 0
   serializedVersion: 3
-  m_Text: Ted, did you take your medications today?
+  m_Text: 'Doctor: Ted, did you take your medications today?'
   m_Anchor: 0
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -220,7 +220,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 297713131}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .245000005, y: .409999996, z: 0}
+  m_LocalPosition: {x: .209999993, y: .409999996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -582,7 +582,7 @@ GUIText:
   m_GameObject: {fileID: 1648903671}
   m_Enabled: 0
   serializedVersion: 3
-  m_Text: No.
+  m_Text: 'Ted: No.'
   m_Anchor: 0
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -604,7 +604,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1648903671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .469999999, y: .340000004, z: 0}
+  m_LocalPosition: {x: .460000008, y: .340000004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -618,7 +618,7 @@ GameObject:
   - 4: {fileID: 1652599626}
   - 132: {fileID: 1652599625}
   m_Layer: 0
-  m_Name: Continue
+  m_Name: Line 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
