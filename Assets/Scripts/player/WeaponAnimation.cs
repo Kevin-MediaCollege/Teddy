@@ -19,14 +19,15 @@ public class WeaponAnimation:MonoBehaviour {
 			animationDone = false;
 		}
 
-		if(animationTimeLeft > 0 && animationTimeLeft < ((animationLenght / 2) * 1.9f)) {
+
+		if(animationTimeLeft > 0 && animationTimeLeft > ((animationLenght / 2) * 1.1f)) {
 			animationTimeLeft -= Time.deltaTime;
-			transform.Rotate(0f, 0f, 7.5f);
+			transform.Rotate(0f, 0f, 3.5f);
 		}
 
-		if(animationTimeLeft > 0 && animationTimeLeft > ((animationLenght / 2) * 1.9f)) {
+		if(animationTimeLeft > 0 && animationTimeLeft < ((animationLenght / 2) * 1.1f)) {
 			animationTimeLeft -= Time.deltaTime;
-			transform.Rotate(0f, 0f, -80f);
+			transform.Rotate(0f, 0f, -10f);
 		}
 
 		if(animationTimeLeft <= 0 && !animationDone) {
