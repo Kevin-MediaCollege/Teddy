@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class WeaponAnimation:MonoBehaviour {
-	private float animationLenght = 0.8f;
+	private float animationLenght = 0.3f;
 
 	private float animationTimeLeft;
 	private Quaternion startRot;
@@ -27,7 +27,7 @@ public class WeaponAnimation:MonoBehaviour {
 
 		if(animationTimeLeft > 0 && animationTimeLeft < ((animationLenght / 2) * 1.1f)) {
 			animationTimeLeft -= Time.deltaTime;
-			transform.Rotate(0f, 0f, -10f);
+			transform.Rotate(0f, 0f, -15f);
 		}
 
 		if(animationTimeLeft <= 0 && !animationDone) {

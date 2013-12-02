@@ -9,13 +9,10 @@ public class PlayerCombat:MonoBehaviour {
 	private GUIText killsDisplay;
 
 	private GameObject currentWeaponGo;
-	private bool playSound = true;
 
 	private ScoreManager scoreManager;
 
 	void Start() {
-		DontDestroyOnLoad(weapon);
-
 		scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
 
 		scoreDisplay = GameObject.Find("Score Display").GetComponent<GUIText>();
@@ -32,9 +29,7 @@ public class PlayerCombat:MonoBehaviour {
 			currentWeaponGo.transform.rotation = transform.rotation;
 
 			if(Input.GetMouseButtonDown(0)) {
-				if(playSound){
-				AudioSource.PlayClipAtPoint(attackSound, transform.position);
-				}
+				GameObject.Find("Sound Manager").GetComponent<AudioManager>().PlaySfx(attackSound, transform.position);
 
 				Collider[] hits = Physics.OverlapSphere(transform.position, 1);
 				
@@ -61,16 +56,20 @@ public class PlayerCombat:MonoBehaviour {
 	}
 
 	public void Kill() {
-		GameObject.Find("Score Manager").GetComponent<ScoreManager>().hasSpawned = false;
+		scoreManager.hasSpawned = false;
+		scoreManager.score = 0;
+		scoreManager.kills = 0;
 
 		Application.LoadLevel(Application.loadedLevel);
 	}
 
 	public void addScore(int score) {
-		scoreManager.score += score;
-		scoreManager.kills++;
+		if(scoreManager != null) {
+			scoreManager.score += score;
+			scoreManager.kills++;
 
-		scoreDisplay.text = "Score: " + scoreManager.score.ToString("0");
-		killsDisplay.text = "Kills: " + scoreManager.kills.ToString("0");
+			scoreDisplay.text = "Score: " + scoreManager.score.ToString("0");
+			killsDisplay.text = "Kills: " + scoreManager.kills.ToString("0");
+		}
 	}
 }

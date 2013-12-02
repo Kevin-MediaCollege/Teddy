@@ -2,23 +2,35 @@
 using System.Collections;
 
 public class AudioManager:MonoBehaviour {
-	public bool playMusic = true;
-	public bool playSFX = true;
+	public bool musicEnabled = true;
+	public bool sfxEnabled = true;
 
 	private AudioSource backgroundAudio;
-	private AudioSource foregroundAudio;
 
 	void Start() {
 		DontDestroyOnLoad(gameObject);
 
 		backgroundAudio = GetComponent<AudioSource>();
-		foregroundAudio = GetComponent<AudioSource>();
 
 		Application.LoadLevel(1);
 	}
 
+	void Update() {
+		if(!musicEnabled) {
+			if(backgroundAudio.isPlaying) {
+				backgroundAudio.Stop();
+			}
+		} else {
+			if(backgroundAudio != null) {
+				if(!backgroundAudio.isPlaying) {
+					backgroundAudio.Play();
+				}
+			}
+		}
+	}
+
 	public void PlayBackgroundAudio(AudioClip audio) {
-		if(playMusic){
+		if(musicEnabled){
 			if(backgroundAudio.isPlaying) {
 				backgroundAudio.Stop();
 			}
@@ -32,6 +44,20 @@ public class AudioManager:MonoBehaviour {
 	public void StopBackgroundAudio() {
 		if(backgroundAudio.isPlaying) {
 			backgroundAudio.Stop();
+		}
+	}
+
+	public void StopAndRemoveBackgroundAudio() {
+		if(backgroundAudio.isPlaying) {
+			backgroundAudio.Stop();
+		}
+
+		backgroundAudio.clip = null;
+	}
+
+	public void PlaySfx(AudioClip audio, Vector3 position) {
+		if(sfxEnabled) {
+			AudioSource.PlayClipAtPoint(audio, position);
 		}
 	}
 

@@ -14,7 +14,7 @@ public class Intro:MonoBehaviour {
 
 	void Start() {
 		if(GameObject.Find("Sound Manager")) {
-			GameObject.Find("Sound Manager").GetComponent<AudioManager>().StopBackgroundAudio();
+			GameObject.Find("Sound Manager").GetComponent<AudioManager>().StopAndRemoveBackgroundAudio();
 		}
 
 		NextLine();
@@ -27,7 +27,7 @@ public class Intro:MonoBehaviour {
 	}
 
 	void NextLine() {
-		float wait = 0;
+		float wait = 0.5f;
 
 		if(curLine > 8) {
 			return;
@@ -55,8 +55,10 @@ public class Intro:MonoBehaviour {
 		foreach(char letter in text.ToCharArray()) {
 			line.text += letter;
 
-			audio.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
-			yield return 0;
+			if(GameObject.Find("Sound Manager").GetComponent<AudioManager>().sfxEnabled) {
+				audio.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
+				yield return 0;
+			}
 
 			yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));
 		}

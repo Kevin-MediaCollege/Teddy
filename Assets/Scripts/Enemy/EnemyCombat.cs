@@ -16,6 +16,8 @@ public class EnemyCombat:MonoBehaviour {
 		if(dead)
 			return;
 
+		Debug.Log ("swak");
+
 		dead = true;
 
 		GetComponent<Animator>().Play("EnemyDead");

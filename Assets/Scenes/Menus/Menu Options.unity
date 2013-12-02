@@ -164,8 +164,9 @@ GameObject:
   - 4: {fileID: 160905435}
   - 212: {fileID: 160905434}
   - 114: {fileID: 160905432}
+  - 65: {fileID: 160905433}
   m_Layer: 0
-  m_Name: Button On
+  m_Name: Music Button On
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,11 +180,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 160905431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e6ae099ce394f2498ff698754474fa1, type: 3}
+  m_Script: {fileID: 11500000, guid: aae0badb0306bd24dbcccd69e2acd892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listenObject: {fileID: 842693868}
-  Inverted: 1
+  id: 0
+  enabled: 1
+  hasRenderer: 1
+--- !u!65 &160905433
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 160905431}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .769999981, y: .319999993, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &160905434
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -328,6 +342,7 @@ GameObject:
   - 4: {fileID: 565141035}
   - 212: {fileID: 565141034}
   - 114: {fileID: 565141036}
+  - 65: {fileID: 565141037}
   m_Layer: 0
   m_Name: SFX Button Off
   m_TagString: Untagged
@@ -377,11 +392,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 565141033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f472bc366b4e144fbfe72a9162c9d0d, type: 3}
+  m_Script: {fileID: 11500000, guid: aae0badb0306bd24dbcccd69e2acd892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listenObject: {fileID: 1364228444}
-  Inverted: 0
+  id: 1
+  enabled: 0
+  hasRenderer: 1
+--- !u!65 &565141037
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 565141033}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14999998, y: .319999993, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &638370022
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +420,7 @@ GameObject:
   - 4: {fileID: 638370026}
   - 212: {fileID: 638370025}
   - 114: {fileID: 638370023}
+  - 65: {fileID: 638370024}
   m_Layer: 0
   m_Name: SFX Button On
   m_TagString: Untagged
@@ -407,11 +436,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 638370022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f472bc366b4e144fbfe72a9162c9d0d, type: 3}
+  m_Script: {fileID: 11500000, guid: aae0badb0306bd24dbcccd69e2acd892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listenObject: {fileID: 1364228444}
-  Inverted: 1
+  id: 1
+  enabled: 1
+  hasRenderer: 1
+--- !u!65 &638370024
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 638370022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .769999981, y: .319999993, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &638370025
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -619,7 +661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4367d73210335944a067e1e8bc14925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
 --- !u!1 &1210315507
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,8 +671,9 @@ GameObject:
   - 4: {fileID: 1210315509}
   - 212: {fileID: 1210315508}
   - 114: {fileID: 1210315510}
+  - 65: {fileID: 1210315511}
   m_Layer: 0
-  m_Name: Button Off
+  m_Name: Music Button Off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -679,11 +721,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210315507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e6ae099ce394f2498ff698754474fa1, type: 3}
+  m_Script: {fileID: 11500000, guid: aae0badb0306bd24dbcccd69e2acd892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listenObject: {fileID: 842693868}
-  Inverted: 0
+  id: 0
+  enabled: 0
+  hasRenderer: 1
+--- !u!65 &1210315511
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1210315507}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14999998, y: .319999993, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1364228444
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c025dac6e74fae24a8b5ac0478b3cf23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
 --- !u!61 &1364228448
 BoxCollider2D:
   m_ObjectHideFlags: 0
