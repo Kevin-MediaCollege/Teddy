@@ -1647,6 +1647,78 @@ Transform:
   m_LocalScale: {x: .374572009, y: 16.6238651, z: .914287984}
   m_Children: []
   m_Father: {fileID: 1892538363}
+--- !u!1 &1426718035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1426718039}
+  - 114: {fileID: 1426718038}
+  - 114: {fileID: 1426718037}
+  - 114: {fileID: 1426718036}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1426718036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1426718035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3eb3f004641bbe44bc5dc48aa395119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1426718037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1426718035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed78bc90e94aa64e99a16cda04ff478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cheat:
+  - l
+  - i
+  - g
+  - h
+  - t
+  - s
+--- !u!114 &1426718038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1426718035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9cf9e1f85494ae4baa237ac84c41c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 50c0a382946f5244fb278126fcdefbe6, type: 3}
+  schedule: 1
+  endCurrent: 1
+--- !u!4 &1426718039
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1426718035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &1473068867
 GameObject:
   m_ObjectHideFlags: 0
