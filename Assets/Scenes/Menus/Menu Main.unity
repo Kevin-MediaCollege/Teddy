@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExitGame: 0
-  LoadLevel: 5
+  LoadLevel: 7
   hasRenderer: 1
 --- !u!212 &1670867411
 SpriteRenderer:
@@ -506,6 +506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 6b36b54c78ae8404695cd245904c4309, type: 3}
   schedule: 0
+  endCurrent: 0
 --- !u!4 &1716892069
 Transform:
   m_ObjectHideFlags: 0

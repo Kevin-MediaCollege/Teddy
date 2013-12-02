@@ -11,8 +11,8 @@ public class CheatMusic:MonoBehaviour {
 	private int index = 0;
 
 	void Start() {
-		if(GameObject.Find("SoundManager")) {
-			manager = GameObject.Find("SoundManager").GetComponent<AudioManager>();
+		if(GameObject.Find("Sound Manager")) {
+			manager = GameObject.Find("Sound Manager").GetComponent<AudioManager>();
 		}
 	}
 	
