@@ -5,24 +5,21 @@ public class PlayerCombat:MonoBehaviour {
 	public AudioClip attackSound;
 	public GameObject weapon;
 
-	private int score;
-	private int kills;
-
 	private GUIText scoreDisplay;
 	private GUIText killsDisplay;
 
 	private GameObject currentWeaponGo;
 
+	private ScoreManager scoreManager;
 
 	void Start() {
-		score = 0;
-		kills = 0;
+		scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
 
 		scoreDisplay = GameObject.Find("Score Display").GetComponent<GUIText>();
 		killsDisplay = GameObject.Find("Kills Display").GetComponent<GUIText>();
 
-		scoreDisplay.text = "Score: " + this.score.ToString("0");
-		killsDisplay.text = "Kills: " + kills.ToString("0");
+		scoreDisplay.text = "Score: " + scoreManager.score.ToString("0");
+		killsDisplay.text = "Kills: " + scoreManager.kills.ToString("0");
 		
 	}
 
@@ -63,10 +60,10 @@ public class PlayerCombat:MonoBehaviour {
 	}
 
 	public void addScore(int score) {
-		this.score += score;
-		kills++;
+		scoreManager.score += score;
+		scoreManager.kills++;
 
-		scoreDisplay.text = "Score: " + this.score.ToString("0");
-		killsDisplay.text = "Kills: " + kills.ToString("0");
+		scoreDisplay.text = "Score: " + scoreManager.score.ToString("0");
+		killsDisplay.text = "Kills: " + scoreManager.kills.ToString("0");
 	}
 }

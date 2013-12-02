@@ -1,21 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\WeaponAnimation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\PlayerCombat.cs">
     <Files>
+      <File FileName="Assets\Scripts\Player\PlayerCombat.cs" Line="21" Column="1" />
+      <File FileName="Assets\Scripts\Player\WeaponAnimation.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Cheats\CheatMusic.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemy\EnemyCombat.cs" Line="17" Column="11" />
-      <File FileName="Assets\Scripts\Enemy\EnemySeeking.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Audio\AudioPlayer.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Managers\CameraManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Managers\ButtonManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Managers\KeyManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Managers\WeaponManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Audio\AudioManager.cs" Line="31" Column="3" />
+      <File FileName="Assets\Scripts\Audio\AudioManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\PlayerCombat.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Intro.cs" Line="17" Column="88" />
+      <File FileName="Assets\Scripts\Intro.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LightBlink.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\WeaponAnimation.cs" Line="33" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

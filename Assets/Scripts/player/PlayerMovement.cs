@@ -35,4 +35,10 @@ public class PlayerMovement:MonoBehaviour {
 			GetComponent<Animator>().Play("PlayerIdle");
 		}
 	}
+
+	void OnTriggerEnter(Collider collider) {
+		if(collider.name == "Next Level") {
+			Application.LoadLevel(6);
+		}
+	}
 }

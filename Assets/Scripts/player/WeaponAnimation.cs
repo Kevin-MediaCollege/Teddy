@@ -23,12 +23,13 @@ public class WeaponAnimation:MonoBehaviour {
 			animationTimeLeft -= Time.deltaTime;
 			transform.Rotate(0f, 0f, 7.5f);
 		}
+
 		if(animationTimeLeft > 0 && animationTimeLeft > ((animationLenght / 2) * 1.9f)) {
 			animationTimeLeft -= Time.deltaTime;
 			transform.Rotate(0f, 0f, -80f);
 		}
-		if(animationTimeLeft <= 0 && !animationDone)
-		{
+
+		if(animationTimeLeft <= 0 && !animationDone) {
 			transform.localRotation = startRot;
 			animationDone = true;
 		}
