@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerCombat:MonoBehaviour {
 	public AudioClip attackSound;
+	public GameObject weapon;
 
 	private int score;
 	private int kills;
@@ -11,6 +12,7 @@ public class PlayerCombat:MonoBehaviour {
 	private GUIText killsDisplay;
 
 	private GameObject currentWeaponGo;
+
 
 	void Start() {
 		score = 0;
@@ -21,6 +23,7 @@ public class PlayerCombat:MonoBehaviour {
 
 		scoreDisplay.text = "Score: " + this.score.ToString("0");
 		killsDisplay.text = "Kills: " + kills.ToString("0");
+		
 	}
 
 	void Update() {
@@ -46,8 +49,11 @@ public class PlayerCombat:MonoBehaviour {
 		if(collider.gameObject.tag == "PickUp") {
 			if(Input.GetKeyDown(KeyCode.E)) {
 				Sprite sprite = collider.GetComponent<SpriteRenderer>().sprite;
-
+				if(currentWeaponGo!=null){currentWeaponGo.renderer.enabled=true;}
+				
 				currentWeaponGo = collider.gameObject;
+				weapon.GetComponent<SpriteRenderer>().sprite=sprite;
+				currentWeaponGo.renderer.enabled=false;
 			}
 		}
 	}
